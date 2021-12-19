@@ -6,7 +6,6 @@ private val Vertices = mutableListOf<Point>()
 private val weights = mutableListOf<PointCalculated>()
 private val routePoints = mutableSetOf<String>()
 fun main(){
-
     print("Enter number of vertices: ")
     val scanner = Scanner(System.`in`)
     val numberOfVertices: Int = scanner.nextInt()
@@ -25,7 +24,7 @@ fun main(){
     for(i in 0 until numberOfVertices){
         weights.clear()
         if(x<1){
-            x++  //x==1
+            x++
             nextPoint = startingPoint
             routePoints.add(startingPoint)
         }
@@ -74,13 +73,11 @@ fun main(){
     val lastRouteWeight = euklidesFormula(Vertices[lastRoute1].x, Vertices[lastRoute2].x, Vertices[lastRoute1].y, Vertices[lastRoute2].y)
     route += lastRouteWeight
 
-
     println("Łączna trasa wynosi: ${route.round(2)}")
     for(i in 0 until routePoints.size){
         print("${routePoints.elementAt(i)} -> ")
     }
     print(startingPoint)
-
 }
 fun euklidesFormula (x1: Int, x2: Int, y1: Int, y2: Int): Double {
     val firstBracket: Double = (x2-x1).toDouble().pow(2)
