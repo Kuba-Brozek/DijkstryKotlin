@@ -4,7 +4,6 @@ import kotlin.math.sqrt
 
 private val Vertices = mutableListOf<Point>()
 private val weights = mutableListOf<PointCalculated>()
-private val weights2 = mutableListOf<PointCalculated>()
 private val routePoints = mutableSetOf<String>()
 fun main(){
 
